@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-(0hna+irit!fv&2-e7mvs39yg4*+=g2itvydt-85p6icf077aq
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -22,6 +22,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -83,14 +84,13 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-MEDIA_URL = '/images/'
+MEDIA_URL = 'images/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'), #or in newer django: BASE_DIR / 'static'
 ]
 
-MEDIA_ROOT = [
-    os.path.join(BASE_DIR, 'static/images')
-]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
