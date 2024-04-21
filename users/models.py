@@ -2,7 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 import uuid
 
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
 
 
 # Create your models here.
@@ -36,10 +37,3 @@ class Skill(models.Model):
     def __str__(self):
         return str(self.name)
 
-
-def profileUpdated(sender, instance, created, **kwargs):
-    print("Profile Saved")
-    print("Instance:", instance)
-    print("Created:", created)
-
-post_save.connect(profileUpdated, sender=Profile) # every time save method is called on a profile after it is completed
