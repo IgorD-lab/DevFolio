@@ -9,7 +9,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-INSTALLED_APPS = []
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -17,7 +17,7 @@ INSTALLED_APPS = []
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'projects.apps.ProjectsConfig', #1 link new app with project
+    'projects.apps.ProjectsConfig', #1 dont just type 'projects' you want config to be linked
     'users.apps.UsersConfig',
 ]
 
