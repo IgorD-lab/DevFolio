@@ -21,15 +21,29 @@
     <title>DevSearch - Connect with Developers!</title>
   </head>
   <body>
-    {% include 'navbar.html' %} {% if messages %}
-    <ul class="messages">
+
+    {% include 'navbar.html' %} 
+
+    {% if messages %}
       {% for message in messages %}
-      <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-        {{ message }}
-      </li>
+        <div class="alert  alert--{{message.tags}}">
+            <p class="alert__message">{{message}}</p>
+            <button class="alert__close">x</button>
+       </div>
       {% endfor %}
-    </ul>
-    {% endif %} {% block content %} {% endblock content %}
+    {% endif %}
+    
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert--{{message.tags}}">
+        <p class="alert__message">{{message}}</p>
+        <button class="alert__close">⨯</button>
+      </div>
+      {% endfor %}
+    {% endif %}
+    
+    {% block content %} {% endblock content %}
     <!-- <p>FOOTER</p> -->
   </body>
+  <script src="{% static 'uikit/app.js' %}"
 </html>
