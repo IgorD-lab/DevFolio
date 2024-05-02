@@ -18,17 +18,17 @@ def loginUser(request):
         username = request.POST['username'].lower()
         password = request.POST['password']
 
-        try: 
+        try:
             user = User.objects.get(username=username)
         except:
-            print('Username does not exist')
+            messages.error(request, 'Username does not exist')
 
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
-            print("User exists", user)
             login(request, user)
             return redirect(request.GET['next'] if 'next' in request.GET else 'account')
+
         else:
             messages.error(request, 'Username OR password is incorrect')
 

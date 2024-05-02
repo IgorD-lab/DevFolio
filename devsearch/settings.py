@@ -84,6 +84,13 @@ USE_I18N = True
 
 USE_TZ = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # what we are using to send emails
+EMAIL_HOST = 'smtp.gmail.com' # provider
+EMAIL_PORT = 587 # check gmail port for ... 
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'mailing.bot.info@gmail.com'
+EMAIL_HOST_PASSWORD = '...' # password
+
 STATIC_URL = 'static/'
 MEDIA_URL = 'images/'
 
