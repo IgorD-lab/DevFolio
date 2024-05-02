@@ -89,7 +89,7 @@ EMAIL_HOST = 'smtp.gmail.com' # provider
 EMAIL_PORT = 587 # check gmail port for ... 
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'mailing.bot.info@gmail.com'
-EMAIL_HOST_PASSWORD = '...' # password
+EMAIL_HOST_PASSWORD = 'hqiekhimdvdgltvy' # password
 
 STATIC_URL = 'static/'
 MEDIA_URL = 'images/'
