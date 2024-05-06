@@ -19,6 +19,8 @@ INSTALLED_APPS = [
     
     'projects.apps.ProjectsConfig', #1 dont just type 'projects' you want config to be linked
     'users.apps.UsersConfig',
+    
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
