@@ -1,3 +1,6 @@
+**RELEASE DATE**
+App should be fully released by 15.5.2024.
+
 **Description:**
 
 This project is a web platform built with Django that allows users to share their projects, receive comments, and vote on each other's work.
@@ -16,3 +19,4 @@ Guide.odt (Work in Progress): You can also download the included guide, which is
 Stay Tuned!
 
 A comprehensive README with full setup and usage instructions will be available soon.
+
