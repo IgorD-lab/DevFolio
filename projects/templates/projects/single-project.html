@@ -15,11 +15,11 @@
           {% endfor %}
         </div>
         {% if project.source_link %}
-        <a class="singleProject__liveLink" href="#" target="_blank"
+        <a class="singleProject__liveLink" href="{{project.source_link}}" target="_blank"
           ><i class="la la-external-link"></i>Source Code</a
         >
         {% endif %} {% if project.demo_link %}
-        <a class="singleProject__liveLink" href="#" target="_blank"
+        <a class="singleProject__liveLink" href="{{project.demo_link}}" target="_blank"
           ><i class="la la-external-link"></i>Live Demo</a
         >
         {% endif %}
@@ -27,7 +27,7 @@
       <div class="column column--2of3">
         <img
           class="singleProject__preview"
-          src="{{ project.featured_image.url }}"
+          src="{{ project.imagerURL }}"
           alt="portfolio thumbnail"
         />
         <a href="{% url 'user-profile' project.owner.id %}" class="singleProject__developer"
@@ -72,7 +72,7 @@
                   <a href="{% url 'user-profile' review.owner.id %}">
                     <img
                       class="avatar avatar--md"
-                      src="{{ review.owner.profile_image.url }}"
+                      src="{{ review.owner.imageURL }}"
                       alt="user"
                     />
                   </a>

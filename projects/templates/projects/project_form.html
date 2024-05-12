@@ -1,12 +1,9 @@
 {% extends 'main.html' %} {% block content %}
 
-<h1>Project Form</h1>
-
-<!-- Main Section -->
 <main class="formPage my-xl">
   <div class="content-box">
     <div class="formWrapper">
-      <a class="backButton" href="{% url 'projects' %}"
+      <a class="backButton" href="{% url 'account' %}"
         ><i class="la la-angle-left"></i></a
       >
       <br />
@@ -20,6 +17,18 @@
           {{ field }}
         </div>
         {% endfor %}
+
+        <div class="form__field">
+          {% for tag in project.tags.all %}
+              <div class="project-tag tag tag--pill tag--main" data-tag="{{tag.id}}" data-project="{{project.id}}">{{tag.name}} &#215;</div>
+          {% endfor %}
+        </div>
+
+        <div class="form__field">
+          <label for="formInput#text">Tags</label>
+          <textarea class="input" name="newtags" placeholder="Add tags here..."></textarea>
+        </div>
+
         <input
           class="btn btn--sub btn--lg my-md"
           type="submit"
@@ -29,5 +38,26 @@
     </div>
   </div>
 </main>
+
+<script>
+  let tags = document.getElementsByClassName('project-tag')
+
+  for (let i =0; tags.length > i; i++) {
+      tags[i].addEventListener('click', (e) => {
+        let tagId = e.target.dataset.tag
+        let projectId = e.target.dataset.project
+
+        let url = `https://127.0.0.1:8000/api/remove-tag/`
+        fetch(url, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{csrf_token}}'
+          }
+        })
+       .then(response => response.json())
+      })
+  }
+</script>
 
 {% endblock %}
