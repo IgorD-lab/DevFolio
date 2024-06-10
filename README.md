@@ -11,18 +11,18 @@ The project is under active development. Daily updates are planned to bring it t
 
 **Getting Started (For Now):**
 
-***Clone the Repository:***  
+***1. Clone the Repository:***  
 - Get the latest code by cloning this repository.  
 
-***Install Dependencies:***  
+***2. Install Dependencies:***  
 - Run pip install -r requirements.txt to install all necessary libraries. 
 (on linux psycopg2 package may cause issues so you might want to remove it if installation is failing and install it manually `pip install --upgrade wheel` may help)  
 
-***Note***  
+***3. Note***  
 - If you only wish to quickly test the project you should go into /devfolio/settiongs.py and uncomment DATABASES = {... sqlite3 ...} while comening DATABASES declaration for postgres below  
 
 
-***Run the Project:***  
+***4. Run the Project:***  
 - If using sqlite database migate it by running `python manage.py makemigrations` and `python manage.py migrate`.    
 - Start the development server with `python manage.py runserver` and access it at http://127.0.0.1:8000/ in your web browser.  
 
