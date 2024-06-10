@@ -22,7 +22,9 @@ Run pip install -r requirements.txt to install all necessary libraries.
 If you only wish to quickly test the project you should go into /devfolio/settiongs.py and uncomment DATABASES = {... sqlite3 ...} while comening DATABASES declaration for postgres below  
 
 
-***Run the Project:*** Start the development server with python manage.py runserver and access it at http://127.0.0.1:8000/ in your web browser.  
+***Run the Project:*** 
+If using sqlite database migate it by running `python manage.py makemigrations` and `python manage.py migrate`.    
+Start the development server with `python manage.py runserver` and access it at http://127.0.0.1:8000/ in your web browser.  
 
 Guide.odt (Work in Progress): You can also download the included guide, which is a work in progress document outlining the website's functionalities.
 Stay Tuned!
