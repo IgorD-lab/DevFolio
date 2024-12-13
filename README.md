@@ -1,5 +1,5 @@
 **RELEASE DATE**
-App should be fully released by 15.5.2024.
+Unknown due to AWS issues
 
 **Description:**
 
