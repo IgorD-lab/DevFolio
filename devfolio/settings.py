@@ -114,9 +114,9 @@ WSGI_APPLICATION = 'devfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'devfind',
+        'NAME': 'devfolio',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'REMOVED',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -151,8 +151,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # what we are usin
 EMAIL_HOST = 'smtp.gmail.com' # provider
 EMAIL_PORT = 587 # check gmail port for ... 
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'mailing.bot.info@gmail.com'
-EMAIL_HOST_PASSWORD = 'hqiekhimdvdgltvy' # password
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = '' # password
+PROTON_API = ""
 
 STATIC_URL = 'static/'
 MEDIA_URL = 'images/'
