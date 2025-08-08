@@ -114,13 +114,25 @@ WSGI_APPLICATION = 'devfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'devfolio',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': '*',
+        'USER': '*',
+        'PASSWORD': '*',
+        'HOST': '*',
+        'PORT': '*',
     }
 }
+
+# LIVE DB
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': '*',
+#         'USER': '*',
+#         'PASSWORD': '*',
+#         'HOST': '*',
+#         'PORT': '*',
+#     }
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
