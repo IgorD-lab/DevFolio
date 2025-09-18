@@ -1,45 +1,55 @@
 # DevSearch
 
-**Release Date:** TBD (AWS deployment pending)
-
-## Description
-
-DevSearch is a web platform built with **Django** that allows developers to:
-
-* Share their projects
-* Comment on other projects
-* Vote on each other’s work
-
-The platform is designed to make it easier for developers to showcase their skills and connect with peers.
+**Status:** Completed and actively maintained
+**Deployment:** Pending (moving to Supabase for production hosting)
 
 ---
 
-## Project Status
+## Overview
 
-This project is actively being developed. Daily progress is made toward reaching a fully functional and production-ready state.
+DevSearch is a full-stack web platform built with **Django** that enables developers to:
 
-### Completed Features
+* Showcase their projects
+* Receive feedback through comments and votes
+* Build a profile highlighting skills and experience
+* Search and connect with other developers
 
-* User authentication (register, login, logout)
-* Profile creation and editing
-* Project creation, editing, and deletion
-* Commenting on projects
-* Voting system for projects
-* Search functionality (find developers and projects)
-* Pagination for project lists
-
-### In Progress
-
-* Messaging system (direct user-to-user communication)
-* Ratings & reviews improvements
-* Deployment to AWS (currently resolving issues)
-* Expanded documentation (Guide + full README)
+It is designed as a practical community hub for developers to share work and collaborate.
 
 ---
 
-## Getting Started
+## Key Features
 
-### 1. Clone the Repository
+* **Authentication & Profiles**
+  User registration, login, logout, and profile management with skills and bio.
+
+* **Project Management**
+  Create, edit, and delete projects, complete with descriptions and tags.
+
+* **Community Interaction**
+  Comment on projects and provide feedback through an integrated voting system.
+
+* **Search & Discovery**
+  Find developers and projects using search filters and pagination for easier navigation.
+
+* **Responsive UI**
+  Clean and user-friendly layout optimized for both desktop and mobile.
+
+---
+
+## Technical Highlights
+
+* **Backend:** Django, Django REST Framework
+* **Database:** PostgreSQL (with SQLite option for local testing)
+* **Authentication:** Django’s built-in auth system with profile extensions
+* **Project Structure:** Modular apps (`users`, `projects`, etc.)
+* **Deployment:** Prepared for cloud hosting (migrating to Supabase)
+
+---
+
+## Installation & Setup
+
+### 1. Clone Repository
 
 ```bash
 git clone <repo_url>
@@ -51,22 +61,18 @@ git clone <repo_url>
 pip install -r requirements.txt
 ```
 
-> ⚠ On Linux, the `psycopg2` package may cause issues. If installation fails:
+> ⚠ On Linux, `psycopg2` may fail. If so:
 >
-> * Remove it from `requirements.txt`
-> * Install manually with:
->
->   ```bash
->   pip install --upgrade wheel psycopg2
->   ```
+> ```bash
+> pip install --upgrade wheel psycopg2
+> ```
 
 ### 3. Configure Database
 
-For quick testing with **SQLite**:
+For quick local testing with **SQLite**:
 
-* Open `/devfolio/settings.py`
-* Uncomment the `DATABASES = {... sqlite3 ...}` block
-* Comment out the PostgreSQL `DATABASES` block
+* In `/devfolio/settings.py`, uncomment the SQLite `DATABASES` block
+* Comment out the PostgreSQL configuration
 
 ### 4. Apply Migrations
 
@@ -75,7 +81,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 5. Run the Development Server
+### 5. Run Server
 
 ```bash
 python manage.py runserver
@@ -85,7 +91,18 @@ Visit: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ---
 
+## Future Development
+
+While the core platform is complete, upcoming improvements include:
+
+* **Community Board**: a simple discussion space for open developer conversations
+* **Testing & CI/CD**: unit tests, API validation, automated workflows
+* **Dockerization**: containerization for easier deployment and scaling
+* **Expanded Documentation**: detailed guides for contributors and deployment
+
+---
+
 ## Documentation
 
-* **Guide (WIP):** `Guide.odt` contains a draft overview of site functionality.
-* A full documentation release will follow once AWS deployment is resolved.
+* **Guide (WIP):** `Guide.odt` provides an outline of the current functionality and development process
+* Full developer documentation will follow after deployment
