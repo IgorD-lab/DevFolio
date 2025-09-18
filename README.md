@@ -18,7 +18,7 @@ The platform is designed to make it easier for developers to showcase their skil
 
 This project is actively being developed. Daily progress is made toward reaching a fully functional and production-ready state.
 
-### ✅ Completed Features
+### Completed Features
 
 * User authentication (register, login, logout)
 * Profile creation and editing
@@ -28,7 +28,7 @@ This project is actively being developed. Daily progress is made toward reaching
 * Search functionality (find developers and projects)
 * Pagination for project lists
 
-### 🔄 In Progress
+### In Progress
 
 * Messaging system (direct user-to-user communication)
 * Ratings & reviews improvements
