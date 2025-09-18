@@ -1,33 +1,91 @@
-**RELEASE DATE**
-Unknown due to AWS issues
+# DevSearch
 
-**Description:**
+**Release Date:** TBD (AWS deployment pending)
 
-This project is a web platform built with Django that allows users to share their projects, receive comments, and vote on each other's work.
+## Description
 
-**Current Status:**
+DevSearch is a web platform built with **Django** that allows developers to:
 
-The project is under active development. Daily updates are planned to bring it to a complete and functional state.
+* Share their projects
+* Comment on other projects
+* Vote on each other’s work
 
-**Getting Started (For Now):**
+The platform is designed to make it easier for developers to showcase their skills and connect with peers.
 
-***1. Clone the Repository:***  
-- Get the latest code by cloning this repository.  
+---
 
-***2. Install Dependencies:***  
-- Run pip install -r requirements.txt to install all necessary libraries. 
-(on linux psycopg2 package may cause issues so you might want to remove it if installation is failing and install it manually `pip install --upgrade wheel` may help)  
+## Project Status
 
-***3. Note***  
-- If you only wish to quickly test the project you should go into /devfolio/settiongs.py and uncomment DATABASES = {... sqlite3 ...} while comening DATABASES declaration for postgres below  
+This project is actively being developed. Daily progress is made toward reaching a fully functional and production-ready state.
 
+### ✅ Completed Features
 
-***4. Run the Project:***  
-- If using sqlite database migate it by running `python manage.py makemigrations` and `python manage.py migrate`.    
-- Start the development server with `python manage.py runserver` and access it at http://127.0.0.1:8000/ in your web browser.  
+* User authentication (register, login, logout)
+* Profile creation and editing
+* Project creation, editing, and deletion
+* Commenting on projects
+* Voting system for projects
+* Search functionality (find developers and projects)
+* Pagination for project lists
 
-Guide.odt (Work in Progress): You can also download the included guide, which is a work in progress document outlining the website's functionalities.
-Stay Tuned!
+### 🔄 In Progress
 
-A comprehensive README with full setup and usage instructions will be available soon.
+* Messaging system (direct user-to-user communication)
+* Ratings & reviews improvements
+* Deployment to AWS (currently resolving issues)
+* Expanded documentation (Guide + full README)
 
+---
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <repo_url>
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+> ⚠ On Linux, the `psycopg2` package may cause issues. If installation fails:
+>
+> * Remove it from `requirements.txt`
+> * Install manually with:
+>
+>   ```bash
+>   pip install --upgrade wheel psycopg2
+>   ```
+
+### 3. Configure Database
+
+For quick testing with **SQLite**:
+
+* Open `/devfolio/settings.py`
+* Uncomment the `DATABASES = {... sqlite3 ...}` block
+* Comment out the PostgreSQL `DATABASES` block
+
+### 4. Apply Migrations
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### 5. Run the Development Server
+
+```bash
+python manage.py runserver
+```
+
+Visit: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+---
+
+## Documentation
+
+* **Guide (WIP):** `Guide.odt` contains a draft overview of site functionality.
+* A full documentation release will follow once AWS deployment is resolved.
