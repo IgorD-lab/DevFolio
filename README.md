@@ -1,4 +1,4 @@
-# DevSearch
+# DevFolio
 
 **Status:** Completed and actively maintained
 **Deployment:** Pending (moving to Supabase for production hosting)
